@@ -184,6 +184,10 @@ jobs:
           # которые нужно выполнить на сервере,
           # с которым установлено соединение
           script: |
+            sudo docker container stop taski-docker-gateway-1
+            sudo docker container rm taski-docker-gateway-1
+            sudo docker container stop taski-docker-backend-1
+            sudo docker container rm taski-docker-backend-1
             cd taski-docker
             
             # Выполняет pull образов с Docker Hub
