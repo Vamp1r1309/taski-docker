@@ -183,10 +183,6 @@ jobs:
           # Параметр script передаёт в action appleboy/ssh-action команды,
           # которые нужно выполнить на сервере
           script: |
-            sudo docker container stop taski-docker-gateway-1
-            sudo docker container rm taski-docker-gateway-1
-            sudo docker container stop taski-docker-backend-1
-            sudo docker container rm taski-docker-backend-1
             cd taski-docker
             
             # Выполняет pull образов с Docker Hub
